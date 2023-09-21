@@ -2,6 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   name: my-service
+  annotations:
+    argocd.argoproj.io/tracking-id: app:nginx/Deployment:default/nginx-deployment
 spec:
   selector:
     app: nginx
